@@ -9,6 +9,17 @@
               <p class="text-justify">Most <a href="http://java.dzone.com/articles/brief-comparison-bdd">BDD frameworks available</a> for java either limit the test to their specific JUnitRunner or can be quite complex to setup.</p>
               <p class="text-justify">COLA Tests bring some more than needed sparkling to BDD in Java unit testing. There is nothing particularly special about the COLA Tests framework except the way it actually works.</p>
               <center>
+                  Specify your business feature...
+{% highlight gherkin %}
+Feature: Find cucumbers
+
+Scenario: Should consume cucumbers
+Given there are 10 cucumbers
+When I eat 2 cucumbers
+Then I should have 8 cucumbers
+{% endhighlight %}
+
+Create your test class...
 {% highlight java %}
 @Features("my-feature-file")
 public class ColaTest {
@@ -31,6 +42,8 @@ public class ColaTest {
     }
 }
 {% endhighlight %}
+
+And take it for a spin!
               </center>
               <br>
               <p>Full <a href="https://github.com/cucumber/cucumber/wiki/Gherkin">Gherkin</a> syntax support.</p>
