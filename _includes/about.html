@@ -1,0 +1,41 @@
+    <!-- About Section -->
+    <section id="about" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+              <h2>About COLA Tests</h2>
+              <p><kbd>‘cola’</kbd> - <code>English, noun - Carbonated soft drink</code></p>
+              <p><kbd>‘cola’</kbd> - <code>Portuguese, noun - Glue or adhesive</code></p>
+              <p class="text-justify">COLA Tests are different from all other <a href="https://speakerdeck.com/mattwynne/what-is-bdd-and-why-should-i-care">BDD</a> frameworks as it allows for developers to keep using any JUnit Runner without having to do any complex configuration or setup.</p>
+              <p class="text-justify">Most <a href="http://java.dzone.com/articles/brief-comparison-bdd">BDD frameworks available</a> for java either limit the test to their specific JUnitRunner or can be quite complex to setup.</p>
+              <p class="text-justify">COLA Tests bring some more than needed sparkling to BDD in Java unit testing. There is nothing particularly special about the COLA Tests framework except the way it actually works.</p>
+              <center>
+{% highlight java %}
+@Features("my-feature-file")
+public class ColaTest {
+
+    private Integer value;
+
+    @Given("there are 10 cucumbers")
+        public void given() {
+        value = 10;
+    }
+
+    @When("I eat 2 cucumbers")
+    public void when() {
+        value -= 2;
+    }
+
+    @Then("I should have 8 cucumbers")
+    public void then() {
+        assertThat(value, equalTo(8));
+    }
+}
+{% endhighlight %}
+              </center>
+              <br>
+              <p>Full <a href="https://github.com/cucumber/cucumber/wiki/Gherkin">Gherkin</a> syntax support.</p>
+              <p class="text-justify">Tested in <a href="http://www.oracle.com/technetwork/java/index.html">Java</a> (dah!!) and <a href="http://kotlinlang.org/">Kotlin</a> under Oracle Java 7 and 8.
+                See <a href="https://github.com/bmsantos/spring-cola-tests">Java + Spring</a> and <a href="https://github.com/bmsantos/kotlin-cola-tests">Kotlin</a> examples.</p>
+            </div>
+        </div>
+    </section>

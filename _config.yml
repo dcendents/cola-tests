@@ -1,0 +1,17 @@
+# Site settings
+title: COLA Tests
+email: bmrosantos@gmail.com
+url: http://bmsantos.github.io/cola-tests/
+description: "COLA Tests = BDD + JUnit"
+
+# Color settings (hex-codes without the leading hash-tag)
+color:
+  primary-dark: '#000000'
+  links: '#219ab3'
+
+# Footer settings
+footer: Released under <a href="https://www.apache.org/licenses/LICENSE-2.0.html">Apache 2</a> license
+
+# Build settings
+markdown: redcarpet2
+permalink: pretty
